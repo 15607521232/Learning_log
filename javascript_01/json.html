@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    var xiaoming = {
+        "name":"su",
+        "age":14
+    }
+    // 将小明对象序列化为Json格式的字符串
+    var s = JSON.stringify(xiaoming);
+    
+    alert(s);
+
+    // 把json字符串使用parse变成一个javascript对象
+    obs_xiaom = JSON.parse('{"name":"xiaoming","age":14}');
+    alert(obs_xiaom);
+    alert(obs_xiaom.name);
+    alert(obs_xiaom.age);
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
