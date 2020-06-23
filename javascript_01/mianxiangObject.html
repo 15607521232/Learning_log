@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象</title>
+    <script type="text/javascript">
+    function Student(name){
+        this.name = name;
+        this.hello = function(){
+            alert("hello " + this.name + " hahha");
+        }
+    }
+
+
+    var xiaoming = new  Student("小明");
+    xiaoming.hello();
+
+    function Student_gouzao(props){
+        this.name = props.name || '匿名';
+        this.grade = props.grade || 1;
+        
+    }
+    Student_gouzao.prototype.hello = function(){
+        alert('hello ' + this.name + " haha");
+    };
+
+    function createStudent(props){
+        return new Student_gouzao(props || {})
+    }
+
+    var xiaohong = createStudent({
+        name: '小红'
+    });
+    xiaohong.grade;
+    alert(xiaohong.grade);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

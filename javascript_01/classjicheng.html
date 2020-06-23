@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class继承</title>
+    <script type="text/javascript">
+    class Student{
+        constructor(name){
+            this.name = name;
+        }
+
+        hello(){
+            alert('hello ' + this.name + "!");
+        }
+    }
+
+    class PrimaryStudent extends Student{
+        constructor(name,grade){
+            super(name);
+            this.grade = grade;
+        }
+        myGrade(){
+            alert('i am at grade ' + this.grade);
+        }
+    }
+    var xiaoming = new PrimaryStudent('小明',2);
+    xiaoming.myGrade();
+    xiaoming.hello();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
