@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 更新</title>
+    <script type="text/javascript">
+    // var p = document.getElementById('p-id');
+
+    // 设置文本内容
+    // p.innerText = 'ABC';
+
+    // document.write(p);
+
+    function getValue(){
+        var x = document.getElementById('p-id');
+        alert(x.innerText);
+    }
+
+    function updateHValue(){
+        var h_test = document.getElementById('h-id');
+        h_test.innerHTML = 'ABC';
+        alert(h_test.innerHTML);
+    }
+
+   
+    </script>
+</head>
+<body>
+    <h1 id='p-id' onclick="getValue()">this is a header</h1>
+    <p>click on the header to alter its value</p>
+
+    <h2 id='h-id' onclick="updateHValue()"> h test</h2>
+</body>
+</html>
